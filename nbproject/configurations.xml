@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="app">
+        <in>application.cpp</in>
+        <in>configuration.cpp</in>
+        <in>webserver.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="pwm"
+                   displayName="pwm"
+                   projectFiles="true"
+                   root="/opt/Sming/Sming/third-party/pwm">
+      <itemPath>/opt/Sming/Sming/third-party/pwm/pwm.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="Sming"
+                   displayName="Sming"
+                   projectFiles="true"
+                   root="/opt/sming/Sming">
+      <logicalFolder name="appspecific" displayName="appspecific" projectFiles="true">
+        <logicalFolder name="rboot" displayName="rboot" projectFiles="true">
+          <itemPath>/opt/sming/Sming/appspecific/rboot/overrides.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="third-party" displayName="third-party" projectFiles="true">
+        <logicalFolder name="rboot" displayName="rboot" projectFiles="true">
+          <logicalFolder name="appcode" displayName="appcode" projectFiles="true">
+            <itemPath>/opt/sming/Sming/third-party/rboot/appcode/rboot-api.c</itemPath>
+            <itemPath>/opt/sming/Sming/third-party/rboot/appcode/rboot-bigflash.c</itemPath>
+          </logicalFolder>
+          <itemPath>/opt/sming/Sming/third-party/rboot/rboot-private.h</itemPath>
+          <itemPath>/opt/sming/Sming/third-party/rboot/rboot-stage2a.c</itemPath>
+          <itemPath>/opt/sming/Sming/third-party/rboot/rboot.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>ESP8266_XTensa|GNU</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-nostdlib -Os -O3"/>
+        <element flagsID="1" commonFlags="-nostdlib -Os -g"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <preprocessorList>
+              <Elem>ICACHE_FLASH</Elem>
+              <Elem>__ets__</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="/opt/Sming/Sming/third-party/pwm/pwm.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="/opt/sming/Sming/appspecific/rboot/overrides.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="/opt/sming/Sming/third-party/rboot/appcode/rboot-api.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="/opt/sming/Sming/third-party/rboot/appcode/rboot-bigflash.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="1">
+          <preprocessorList>
+            <Elem>CUST_FILE_BASE=rboot-bigflash</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="/opt/sming/Sming/third-party/rboot/rboot-stage2a.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/opt/sming/Sming/third-party/rboot</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="/opt/sming/Sming/third-party/rboot/rboot.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+          <incDir>
+            <pElem>/opt/sming/Sming/third-party/rboot</pElem>
+            <pElem>out/build</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="app/application.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="app/configuration.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="app/webserver.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <folder path="Sming">
+        <cTool>
+          <preprocessorList>
+            <Elem>BOOT_BIG_FLASH</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="Sming/appspecific">
+        <cTool>
+          <incDir>
+            <pElem>app</pElem>
+            <pElem>/opt/sming/Sming/third-party/rboot/appcode</pElem>
+            <pElem>/opt/sming/Sming/appspecific/rboot</pElem>
+            <pElem>app/include</pElem>
+            <pElem>/opt/sming/Sming/third-party/rboot/appcode/include</pElem>
+            <pElem>/opt/sming/Sming/appspecific/rboot/include</pElem>
+            <pElem>include</pElem>
+            <pElem>/opt/sming/Sming/include</pElem>
+            <pElem>/opt/sming/Sming</pElem>
+            <pElem>/opt/sming/Sming/third-party/esp-open-lwip/include</pElem>
+            <pElem>/opt/sming/Sming/system/include</pElem>
+            <pElem>/opt/sming/Sming/Wiring</pElem>
+            <pElem>/opt/sming/Sming/Libraries</pElem>
+            <pElem>/opt/sming/Sming/Libraries/Adafruit_GFX</pElem>
+            <pElem>/opt/sming/Sming/Libraries/Adafruit_Sensor</pElem>
+            <pElem>/opt/sming/Sming/SmingCore</pElem>
+            <pElem>/opt/sming/Sming/Services/SpifFS</pElem>
+            <pElem>/opt/esp-open-sdk/include</pElem>
+            <pElem>/opt/sming/Sming/third-party/rboot</pElem>
+            <pElem>/opt/sming/Sming/third-party/spiffs/src</pElem>
+            <pElem>third-party/esp-open-lwip/include</pElem>
+            <pElem>/opt/esp-open-sdk/sdk/include</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ARDUINO=106</Elem>
+            <Elem>COM_SPEED_SERIAL=115200</Elem>
+            <Elem>CUST_FILE_BASE=overrides</Elem>
+            <Elem>DEBUG_PRINT_FILENAME_AND_LINE=0</Elem>
+            <Elem>DEBUG_VERBOSE_LEVEL=2</Elem>
+            <Elem>ENABLE_CMD_EXECUTOR=1</Elem>
+            <Elem>RBOOT_INTEGRATION</Elem>
+            <Elem>RBOOT_SPIFFS_0=0x100000</Elem>
+            <Elem>RBOOT_SPIFFS_1=0x300000</Elem>
+            <Elem>SMING_INCLUDED=1</Elem>
+            <Elem>SPIFF_SIZE=196608</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="Sming/third-party/rboot/appcode">
+        <cTool>
+          <incDir>
+            <pElem>app</pElem>
+            <pElem>/opt/sming/Sming/third-party/rboot/appcode</pElem>
+            <pElem>/opt/sming/Sming/appspecific/rboot</pElem>
+            <pElem>app/include</pElem>
+            <pElem>/opt/sming/Sming/third-party/rboot/appcode/include</pElem>
+            <pElem>/opt/sming/Sming/appspecific/rboot/include</pElem>
+            <pElem>include</pElem>
+            <pElem>/opt/sming/Sming/include</pElem>
+            <pElem>/opt/sming/Sming</pElem>
+            <pElem>/opt/sming/Sming/third-party/esp-open-lwip/include</pElem>
+            <pElem>/opt/sming/Sming/system/include</pElem>
+            <pElem>/opt/sming/Sming/Wiring</pElem>
+            <pElem>/opt/sming/Sming/Libraries</pElem>
+            <pElem>/opt/sming/Sming/Libraries/Adafruit_GFX</pElem>
+            <pElem>/opt/sming/Sming/Libraries/Adafruit_Sensor</pElem>
+            <pElem>/opt/sming/Sming/SmingCore</pElem>
+            <pElem>/opt/sming/Sming/Services/SpifFS</pElem>
+            <pElem>/opt/esp-open-sdk/include</pElem>
+            <pElem>/opt/sming/Sming/third-party/rboot</pElem>
+            <pElem>/opt/sming/Sming/third-party/spiffs/src</pElem>
+            <pElem>third-party/esp-open-lwip/include</pElem>
+            <pElem>/opt/esp-open-sdk/sdk/include</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ARDUINO=106</Elem>
+            <Elem>COM_SPEED_SERIAL=115200</Elem>
+            <Elem>CUST_FILE_BASE=rboot-api</Elem>
+            <Elem>DEBUG_PRINT_FILENAME_AND_LINE=0</Elem>
+            <Elem>DEBUG_VERBOSE_LEVEL=2</Elem>
+            <Elem>ENABLE_CMD_EXECUTOR=1</Elem>
+            <Elem>RBOOT_INTEGRATION</Elem>
+            <Elem>RBOOT_SPIFFS_0=0x100000</Elem>
+            <Elem>RBOOT_SPIFFS_1=0x300000</Elem>
+            <Elem>SMING_INCLUDED=1</Elem>
+            <Elem>SPIFF_SIZE=196608</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="pwm">
+        <cTool>
+          <incDir>
+            <pElem>/opt/Sming/Sming/system</pElem>
+            <pElem>/opt/Sming/Sming/system/helpers</pElem>
+            <pElem>/opt/Sming/Sming/Wiring</pElem>
+            <pElem>/opt/Sming/Sming/appinit</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/Http</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/Http/Stream</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/Http/Websocket</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Platform</pElem>
+            <pElem>/opt/Sming/Sming/Services/WebHelpers</pElem>
+            <pElem>/opt/Sming/Sming/Services/DateTime</pElem>
+            <pElem>/opt/Sming/Sming/Services/ArduinoJson</pElem>
+            <pElem>/opt/Sming/Sming/Services/CommandProcessing</pElem>
+            <pElem>/opt/Sming/Sming/Services/HexDump</pElem>
+            <pElem>/opt/Sming/Sming/Services/Yeelight</pElem>
+            <pElem>/opt/Sming/Sming/Services/cWebsocket</pElem>
+            <pElem>/opt/Sming/Sming/Services/FATFS</pElem>
+            <pElem>/opt/Sming/Sming/Services/SpifFS</pElem>
+            <pElem>/opt/Sming/Sming/Services/libemqtt</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/SparkFun_APDS9960</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/LiquidCrystal</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/IR</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_ST7735</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MCP23S17</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/si4432</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/DHT</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/RF24</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/WS2812</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Servo</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MMA_7455</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/SDCard</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/BMP180</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/HMC5883L</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_PCD8544</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/BH1750FVI</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MCP23017</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/RCSwitch</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_SSD1306</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/DS18S20</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/DS3232RTC</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Ultrasonic</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/AM2321</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/ArduCAM</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/TFT_ILI9163C</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_NeoPixel</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/I2Cdev</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_GFX</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MFRC522</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Bounce</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_ILI9341</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/SI7021</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Mirf</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/OneWire</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/APA102</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/CapacitiveSensor</pElem>
+            <pElem>/opt/Sming/Sming/third-party/spiffs/src</pElem>
+            <pElem>/opt/Sming/Sming/third-party/http-parser</pElem>
+            <pElem>/opt/Sming/Sming/third-party/ws_parser</pElem>
+            <pElem>/opt/Sming/Sming/gdb</pElem>
+            <pElem>/opt/Sming/Sming/system/include</pElem>
+            <pElem>/opt/Sming/Sming/system/helpers/include</pElem>
+            <pElem>/opt/Sming/Sming/Wiring/include</pElem>
+            <pElem>/opt/Sming/Sming/appinit/include</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/include</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/include</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/Http/include</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/Http/Stream/include</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Network/Http/Websocket/include</pElem>
+            <pElem>/opt/Sming/Sming/SmingCore/Platform/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/WebHelpers/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/DateTime/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/ArduinoJson/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/CommandProcessing/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/HexDump/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/Yeelight/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/cWebsocket/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/FATFS/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/SpifFS/include</pElem>
+            <pElem>/opt/Sming/Sming/Services/libemqtt/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/SparkFun_APDS9960/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/LiquidCrystal/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/IR/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_ST7735/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MCP23S17/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/si4432/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/DHT/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/RF24/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/WS2812/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Servo/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MMA_7455/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/SDCard/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/BMP180/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/HMC5883L/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_PCD8544/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/BH1750FVI/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MCP23017/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/RCSwitch/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_SSD1306/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/DS18S20/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/DS3232RTC/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Ultrasonic/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/AM2321/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/ArduCAM/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/TFT_ILI9163C/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_NeoPixel/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/I2Cdev/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_GFX/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/MFRC522/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Bounce/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Adafruit_ILI9341/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/SI7021/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/Mirf/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/OneWire/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/APA102/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries/CapacitiveSensor/include</pElem>
+            <pElem>/opt/Sming/Sming/third-party/spiffs/src/include</pElem>
+            <pElem>/opt/Sming/Sming/third-party/http-parser/include</pElem>
+            <pElem>/opt/Sming/Sming/third-party/ws_parser/include</pElem>
+            <pElem>/opt/Sming/Sming/gdb/include</pElem>
+            <pElem>/opt/Sming/Sming/include</pElem>
+            <pElem>/opt/Sming/Sming/Libraries</pElem>
+            <pElem>/opt/esp-open-sdk/include</pElem>
+            <pElem>/opt/Sming/Sming/third-party/rboot</pElem>
+            <pElem>/opt/Sming/Sming/third-party/rboot/appcode</pElem>
+            <pElem>/opt/Sming/Sming/third-party/esp-open-lwip/include</pElem>
+            <pElem>/opt/esp-open-sdk/sdk/include</pElem>
+            <pElem>/opt/esp-open-sdk/sdk/include/json</pElem>
+            <pElem>/opt/Sming/Sming</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>ARDUINO=106</Elem>
+            <Elem>COM_SPEED_SERIAL=115200</Elem>
+            <Elem>CUST_FILE_BASE=</Elem>
+            <Elem>DEBUG_PRINT_FILENAME_AND_LINE=0</Elem>
+            <Elem>DEBUG_VERBOSE_LEVEL=2</Elem>
+            <Elem>ENABLE_CMD_EXECUTOR=1</Elem>
+            <Elem>ESP8266=1</Elem>
+            <Elem>PROGMEM_L32=__attribute__((aligned(4))) __attribute__((section(".irom.text")))</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>
